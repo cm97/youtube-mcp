@@ -1,0 +1,6 @@
+# Copy to .dev.vars for `npm run dev`. In production set these with `npx wrangler secret put <NAME>`.
+GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-client-secret
+# Optional: comma-separated Google accounts allowed to connect. Leave empty to allow any account
+# your Google OAuth app lets sign in (in "Testing" mode that's only the test users you added).
+ALLOWED_GOOGLE_EMAILS=
