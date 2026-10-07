@@ -34,6 +34,13 @@ npx wrangler deploy    # also creates the KV storage it needs
 
 The deploy prints your server's address, something like `https://youtube-mcp.<your-subdomain>.workers.dev`. You'll need it below.
 
+**Or let GitHub deploy it automatically.** `.github/workflows/deploy.yml` deploys every push to `main`. It needs two repository secrets, set under *Settings → Secrets and variables → Actions*:
+
+- `CLOUDFLARE_API_TOKEN`: create one at dash.cloudflare.com → *My Profile → API Tokens* from the **Edit Cloudflare Workers** template.
+- `CLOUDFLARE_ACCOUNT_ID`: shown in the Cloudflare dashboard sidebar.
+
+After adding them, run the workflow once from the repo's *Actions* tab (*Deploy to Cloudflare → Run workflow*), or push any change. The address appears in the run's log.
+
 ### 2. Create Google API credentials
 
 In the [Google Cloud console](https://console.cloud.google.com/):
